@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Deletion-resilient hypermedia pagination
-"""
+"""Deletion-resilient hypermedia pagination."""
 
 import csv
 from typing import Dict, List
@@ -13,11 +11,12 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """Initialize the server."""
         self.__dataset = None
         self.__indexed_dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset."""
+        """Return cached dataset."""
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
@@ -36,14 +35,8 @@ class Server:
 
         return self.__indexed_dataset
 
-    def get_hyper_index(
-        self,
-        index: int = None,
-        page_size: int = 10
-    ) -> Dict:
-        """
-        Return a deletion-resilient page.
-        """
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """Return a deletion-resilient page."""
         dataset = self.indexed_dataset()
 
         if index is None:
