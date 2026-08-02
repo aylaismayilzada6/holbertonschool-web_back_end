@@ -1,4 +1,8 @@
 {
+  "name": "node_js_basic",
+  "version": "1.0.0",
+  "description": "Node JS basics",
+  "main": "full_server/server.js",
   "dependencies": {
     "express": "^5.2.1"
   },
@@ -10,6 +14,18 @@
     "full-test": "node ./node_modules/eslint/bin/eslint.js . && npm test"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "mocha": "^6.2.2",
+    "nodemon": "^3.1.0",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0"
   }
 }
